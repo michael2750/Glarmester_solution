@@ -31,7 +31,6 @@ public class TopDownTest {
         System.out.println("getGlassprice");
         instance = new DataAccessorDatabase();
         getValues = new DataAccessorHardCodedValues();
-
         double expResult = getValues.getGlassprice();
         double result = instance.getGlassprice();
         assertEquals(expResult, result, 0.0);
@@ -64,7 +63,6 @@ public class TopDownTest {
         System.out.println("testGetFramePriceErr");
         instance = new DataAccessorDatabase();
         getValues = new DataAccessorHardCodedValues();
-
         double result = instance.getFramePrice(FrameType.Test);
         assertEquals(true, Double.isNaN(result));
     }
